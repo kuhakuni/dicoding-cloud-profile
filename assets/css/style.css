@@ -1,0 +1,233 @@
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+body {
+	font-family: "Poppins", sans-serif;
+	background: #f8f8ff;
+}
+
+/*--------------------------------------------------------------
+# Section Hero
+--------------------------------------------------------------*/
+.hero {
+	min-height: 100vh;
+}
+.foto-hero {
+	border: #dc3545 solid 7px;
+}
+.btn-read-more,
+.card-body a {
+	font-weight: 500;
+	transition: all 0.2s;
+}
+.btn-read-more:hover,
+.card-body a:hover {
+	font-weight: 500;
+	background: none;
+	color: #dc3545;
+}
+.container-hero > * {
+	margin-right: 1.5rem;
+	margin-left: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Section About
+--------------------------------------------------------------*/
+.title {
+	font-size: calc(1.375rem + 1.5vw);
+	font-weight: 600;
+}
+hr {
+	opacity: 1;
+	width: 100px !important;
+	color: #dc3545;
+	height: 5px !important;
+}
+.text-justify {
+	text-align: justify;
+}
+
+/*--------------------------------------------------------------
+# Section Divider
+--------------------------------------------------------------*/
+.divider {
+	min-height: 50vh;
+	background: linear-gradient(
+			0deg,
+			rgba(220, 53, 69, 0.6),
+			rgba(220, 53, 69, 0.8)
+		),
+		url("../img/cover.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.divider a:hover {
+	color: #dc3545;
+}
+
+/*--------------------------------------------------------------
+# Section Experience
+--------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+	.container-hero {
+		flex-direction: column;
+	}
+	.card-experience,
+	.card-portfolio {
+		display: flex;
+		justify-content: center;
+	}
+}
+.card {
+	border: none;
+	margin: 0 0.2rem;
+	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.2);
+}
+.card-experience .card {
+	padding: 1.5rem 1rem;
+}
+
+/*--------------------------------------------------------------
+# Section Portfolio
+--------------------------------------------------------------*/
+.portfolio {
+	min-height: 80vh;
+}
+.card-portfolio .card {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Back to top
+--------------------------------------------------------------*/
+.back-to-top {
+	cursor: pointer;
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: 15px;
+	z-index: 99;
+	background: #dc3545;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.2);
+}
+
+.back-to-top i {
+	font-size: 24px;
+	color: #fff;
+}
+
+.back-to-top:hover {
+	background: #bb2d3b;
+}
+
+.back-to-top.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+.spinner-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #dc3545;
+	z-index: 999999;
+}
+.spinner {
+	width: 60px;
+	height: 60px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.double-bounce1,
+.double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #f8f8ff;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	-webkit-animation: sk-bounce 2s infinite ease-in-out;
+	animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+	0%,
+	100% {
+		-webkit-transform: scale(0);
+	}
+	50% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes sk-bounce {
+	0%,
+	100% {
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.container-footer > * {
+	margin-bottom: 1.5rem;
+}
+
+a.sosmed {
+	background-color: #a9a9a9;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.3rem;
+	margin-left: 0.3rem;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	transition: all 300ms ease-in-out;
+}
+a.sosmed:hover {
+	background-color: rgb(249, 109, 48);
+	transform: scale(1.2);
+}
+a.sosmed i {
+	font-size: 30px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.cp a:hover {
+	color: inherit;
+	text-decoration: underline;
+}
