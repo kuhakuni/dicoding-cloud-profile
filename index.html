@@ -22,6 +22,7 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<title>Portfolio | Afif Haidar</title>
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -67,8 +68,15 @@
 							alt="Foto saya"
 							class="foto-hero rounded-circle shadow-sm"
 							width="250"
+							data-aos="fade-right"
+							data-aos-duration="1000"
 						/>
-						<div class="text-hero">
+						<div
+							class="text-hero"
+							data-aos="fade-left"
+							data-aos-duration="1000"
+							data-aos-delay="200"
+						>
 							<h4 class="fw-light fs-4">Hello,</h4>
 							<h1 class="fw-light display-5">
 								I'm <span class="fw-bold text-danger">Haidar!</span>
@@ -85,11 +93,15 @@
 		<section class="about mb-4" id="about">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12" data-aos="fade-right" data-aos-duration="1000">
 						<h1 class="display-6 title">About me</h1>
 						<hr />
 					</div>
-					<div class="col-md-6 text-justify">
+					<div
+						class="col-md-6 text-justify"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
 						<p>
 							My name is Afif Haidar you can call me Haidar. I'm a student of
 							Information System at Faculty of Computer Science Brawijaya
@@ -101,7 +113,11 @@
 							probably some questions nobody asked lol.
 						</p>
 					</div>
-					<div class="col-md-6 text-justify">
+					<div
+						class="col-md-6 text-justify"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
 						<p>
 							I'm curently interested in web developing from designing UI/UX to
 							developing front end and back end of a website. I am capable of
@@ -126,18 +142,26 @@
 				text-white
 			"
 		>
-			<h1 class="pb-3">Keep Going?</h1>
+			<h1 class="pb-3" data-aos="fade-down">Keep Going?</h1>
 			<a href="#experience" class="btn btn-outline-light">More</a>
 		</section>
 		<section class="experience mb-5" id="experience">
 			<div class="container">
 				<div class="row card-experience">
-					<div class="col-md-12">
+					<div class="col-md-12" data-aos="fade-right" data-aos-duration="1000">
 						<h1 class="display-6 title">Experiences</h1>
 						<hr />
 					</div>
-					<p>Here are some of my recent experiences</p>
-					<div class="card mb-2 bg-danger text-white" style="width: 18rem">
+					<p data-aos="fade-right" data-aos-duration="1000">
+						Here are some of my recent experiences
+					</p>
+					<div
+						class="card mb-2 bg-danger text-white"
+						style="width: 18rem"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
 						<div class="card-body">
 							<h6 style="font-weight: 400">June 2021 - Now</h6>
 							<h5 class="card-title">IT Staff</h5>
@@ -150,7 +174,13 @@
 							</p>
 						</div>
 					</div>
-					<div class="card mb-2" style="width: 18rem">
+					<div
+						class="card mb-2"
+						style="width: 18rem"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="400"
+					>
 						<div class="card-body">
 							<h6 style="font-weight: 400">July 2021 - Oct 2021</h6>
 							<h5 class="card-title">CO Publication & IT</h5>
@@ -161,7 +191,13 @@
 							</p>
 						</div>
 					</div>
-					<div class="card mb-2" style="width: 18rem">
+					<div
+						class="card mb-2"
+						style="width: 18rem"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="600"
+					>
 						<div class="card-body">
 							<h6 style="font-weight: 400">Oct 2020 - Feb 2021</h6>
 							<h5 class="card-title">Creative Media Intern</h5>
@@ -179,12 +215,20 @@
 		<section class="portfolio">
 			<div class="container">
 				<div class="row card-portfolio">
-					<div class="col-md-12">
+					<div class="col-md-12" data-aos="fade-right" data-aos-duration="1000">
 						<h1 class="display-6 title">Portfolio</h1>
 						<hr />
 					</div>
-					<p>Here are some of my portfolio that i made recently.</p>
-					<div class="card mb-2" style="width: 20rem">
+					<p data-aos="fade-right" data-aos-duration="1000">
+						Here are some of my portfolio that i made recently.
+					</p>
+					<div
+						class="card mb-2"
+						style="width: 20rem"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
 						<img
 							src="assets/img/web-bms.png"
 							class="card-img-top"
@@ -210,7 +254,13 @@
 							>
 						</div>
 					</div>
-					<div class="card mb-2" style="width: 20rem">
+					<div
+						class="card mb-2"
+						style="width: 20rem"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="400"
+					>
 						<img
 							src="assets/img/web-em.png"
 							class="card-img-top"
@@ -255,7 +305,7 @@
 			></path>
 		</svg>
 		<section class="footer py-3 bg-danger text-white">
-			<div class="container-footer text-center">
+			<div class="container-footer text-center" data-aos="fade-down">
 				<h2 class="fw-bold">Reach Me</h2>
 				<div class="sosmed d-flex justify-content-center">
 					<!-- Linkedin -->
@@ -297,5 +347,9 @@
 			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>
