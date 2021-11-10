@@ -30,5 +30,5 @@ $(document).ready(() => {
 		);
 	});
 	//Preloader
-	(() => $(".spinner-wrapper").fadeOut("slow"))();
+	// (() => $(".spinner-wrapper").fadeOut("slow"))();
 });
