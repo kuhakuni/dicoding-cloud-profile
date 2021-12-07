@@ -1,34 +1,47 @@
 "use strict";
-$(document).ready(() => {
+
+function ready(callback) {
+	if (document.readyState != "loading") return callback();
+	document.addEventListener("DOMContentLoaded", callback);
+}
+ready(() => {
 	// Memunculkan serta menyembunyikan tombol back to top
-	let backToTop = $(".back-to-top");
-	$(window).scroll(() => {
-		if ($(this).scrollTop() > 200) {
-			backToTop.addClass("active");
+	let backToTop = document.querySelector(".back-to-top");
+	this.addEventListener("scroll", () => {
+		if (scrollY > 200) {
+			backToTop.classList.add("active");
 		} else {
-			backToTop.removeClass("active");
+			backToTop.classList.remove("active");
 		}
 	});
+
 	//Animasi scroll back to top
-	backToTop.click(() => {
-		$("body,html").animate(
-			{
-				scrollTop: 0,
-			},
-			50
-		);
+	backToTop.addEventListener(
+		"click",
+		() => {
+			window.scroll({
+				top: 0,
+				behavior: "smooth",
+			});
+		},
+		false
+	);
+
+	let hyperlink = document.querySelectorAll('a[href^="#"]');
+	//scroll to element
+	hyperlink.forEach((element) => {
+		element.addEventListener("click", (event) => {
+			event.preventDefault();
+			let hash = element.getAttribute("href");
+			document.querySelector(hash).scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		});
 	});
-	//Animasi scroll link
-	$('a[href^="#"]').on("click", function (e) {
-		e.preventDefault();
-		$("html, body").animate(
-			{
-				scrollTop: $($(this).attr("href")).offset().top - 20,
-			},
-			50,
-			"linear"
-		);
-	});
+
 	//Preloader
-	(() => $(".spinner-wrapper").fadeOut("slow"))();
+	let preloader = document.querySelector(".spinner-wrapper");
+	preloader.classList.add("hide");
+	preloader.classList.remove("show");
 });

@@ -6,9 +6,6 @@ body {
 	background: #f8f8ff;
 }
 
-div {
-	overflow: hidden;
-}
 /*--------------------------------------------------------------
 # Section Hero
 --------------------------------------------------------------*/
@@ -150,6 +147,7 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 .spinner {
 	width: 60px;
@@ -177,6 +175,15 @@ hr {
 	animation-delay: -1s;
 }
 
+.show {
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
+	display: none;
+	transition: all 500ms;
+}
 @-webkit-keyframes sk-bounce {
 	0%,
 	100% {
@@ -216,6 +223,7 @@ a.sosmed {
 	border-radius: 50%;
 	width: 56px;
 	height: 56px;
+	z-index: 9999;
 	transition: all 300ms ease-in-out;
 }
 a.sosmed:hover {
