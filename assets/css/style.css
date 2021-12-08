@@ -6,6 +6,10 @@ body {
 	background: #f8f8ff;
 }
 
+section {
+	overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Section Hero
 --------------------------------------------------------------*/
@@ -147,7 +151,6 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
 }
 .spinner {
 	width: 60px;
@@ -157,7 +160,6 @@ hr {
 
 .double-bounce1,
 .double-bounce2 {
-	overflow: hidden;
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
