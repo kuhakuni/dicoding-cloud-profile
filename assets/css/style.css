@@ -21,14 +21,12 @@ section {
 	border: #dc3545 solid 7px;
 }
 
-.btn-read-more,
-.card-body a {
+.btn-danger {
 	font-weight: 500;
 	transition: all 0.2s;
 }
 
-.btn-read-more:hover,
-.card-body a:hover {
+.btn-danger:hover {
 	font-weight: 500;
 	background: none;
 	color: #dc3545;
@@ -38,7 +36,6 @@ section {
 	margin-right: 1.5rem;
 	margin-left: 1.5rem;
 }
-
 /*--------------------------------------------------------------
 # Section About
 --------------------------------------------------------------*/
