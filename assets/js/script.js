@@ -44,4 +44,9 @@ ready(() => {
 	let preloader = document.querySelector(".spinner-wrapper");
 	preloader.classList.add("hide");
 	preloader.classList.remove("show");
+
+	let foto = document.querySelector("img.rounded-circle");
+	window.addEventListener("load", function () {
+		foto.classList.add("foto-hero");
+	});
 });
