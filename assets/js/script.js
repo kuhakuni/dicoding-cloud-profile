@@ -47,8 +47,28 @@ ready(() => {
 
 	//foto profil
 	let foto = document.querySelector("img.rounded-circle");
-	window.addEventListener("load", function () {
+	window.addEventListener("load", () => {
 		foto.classList.add("foto-hero");
+	});
+
+	//anonymous mode
+	const anonymousSwitch = document.getElementById("anonymous-switch");
+	const formName = document.querySelector(".form-name");
+	const formEmail = document.querySelector(".form-email");
+	const inputName = document.getElementById("name");
+	const inputEmail = document.getElementById("email");
+	anonymousSwitch.addEventListener("change", () => {
+		if (anonymousSwitch.checked) {
+			inputName.value = "Anonim";
+			inputEmail.value = "anon@anon";
+			formName.classList.add("hidden");
+			formEmail.classList.add("hidden");
+		} else {
+			inputName.value = "";
+			inputEmail.value = "";
+			formName.classList.remove("hidden");
+			formEmail.classList.remove("hidden");
+		}
 	});
 
 	//send form
@@ -64,18 +84,16 @@ ready(() => {
 		btnLoading.classList.toggle("d-none");
 		btnSubmit.classList.toggle("d-none");
 		fetch(scriptURL, { method: "POST", body: new FormData(form) })
-			.then((response) => {
+			.then(() => {
 				btnLoading.classList.toggle("d-none");
 				btnSubmit.classList.toggle("d-none");
 				alertSuccess.classList.remove("d-none");
 				form.reset();
-				console.log("Success!", response);
 			})
-			.catch((error) => {
+			.catch(() => {
 				btnLoading.classList.toggle("d-none");
 				btnSubmit.classList.toggle("d-none");
 				alertFail.classList.remove("d-none");
-				console.error("Error!", error.message);
 			});
 	});
 });
