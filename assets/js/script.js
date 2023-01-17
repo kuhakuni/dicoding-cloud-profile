@@ -1,4 +1,5 @@
 "use strict";
+import { dataPortfolios } from "./data.js";
 
 function ready(callback) {
 	if (document.readyState != "loading") return callback();
@@ -7,7 +8,7 @@ function ready(callback) {
 ready(() => {
 	// Memunculkan serta menyembunyikan tombol back to top
 	let backToTop = document.querySelector(".back-to-top");
-	this.addEventListener("scroll", () => {
+	window.addEventListener("scroll", () => {
 		if (innerHeight + scrollY >= document.body.offsetHeight - 300) {
 			backToTop.classList.add("active");
 		} else {
@@ -96,4 +97,46 @@ ready(() => {
 				alertFail.classList.remove("d-none");
 			});
 	});
+
+	//Fill portfolio container
+	const portfolio = document.getElementById("portfolio");
+	let html = "";
+	dataPortfolios.map((item, index) => {
+		html += `<div
+        class="card mb-2 me-3"
+        style="width: 20rem"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="${index * 100}"
+    >
+        <img
+            src="${item.image}"
+            class="card-img-top"
+            alt="${item.name}"
+        />
+        <div class="card-body">
+        ${item.tags
+			.map((tag) => {
+				return `<div class="tag badge mb-3 me-2 rounded-pill">${tag}</div>`;
+			})
+			.join("")}
+            <h5
+                class="card-title text-danger"
+                style="font-weight: 600"
+            >
+                ${item.name}
+            </h5>
+            <p class="card-text">
+                ${item.description}
+            </p>
+            <a
+                href="${item.url}"
+                class="btn btn-danger"
+                target="_blank"
+                >Visit</a
+            >
+        </div>
+    </div>`;
+	});
+	portfolio.innerHTML = html;
 });
