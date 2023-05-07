@@ -68,7 +68,7 @@ hr {
 			rgba(220, 53, 69, 0.6),
 			rgba(220, 53, 69, 0.8)
 		),
-		url("../img/cover.jpg");
+		url("https://storage.cloud.google.com/kuhakuni-bucket/cover.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
